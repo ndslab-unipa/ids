@@ -20,9 +20,9 @@ This layer utilizes **Stacked Generalization** to learn how to optimally combine
 
 ### 4. Final Weighted Voting (Heuristic-based Confidence)
 The final decision integrates the Ensemble (Experts' aggregated output) and the Meta-Classifier's prediction using a confidence-based heuristic. In **Heuristic Score ($S$)**  the system selects the prediction (Ensemble or Meta) with the higher score, calculated as:
-    $$
-    S = (\gamma \times \text{F1-Score}_\text{Class}) + ((1 - \gamma) \times \text{Confidence})
-    $$
+
+$$S = (\gamma \times \text{F1-Score}_\text{Class}) + ((1 - \gamma) \times \text{Confidence})$$
+
 Where:
 * $\text{F1-Score}_\text{Class}$: Pre-calculated F1 performance of the model (Ensemble or Meta) for the predicted class.
 * $\text{Confidence}$: Calculated as $1 - \text{Entropy}$.
