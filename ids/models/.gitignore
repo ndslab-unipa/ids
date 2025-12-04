@@ -1,0 +1,6 @@
+# Models saved in the project to ignore
+*.h5
+*.joblib
+
+# Weights saved in the project to ignore
+*.csv
